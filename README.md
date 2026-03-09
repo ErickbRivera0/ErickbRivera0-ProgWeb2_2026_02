@@ -1,7 +1,7 @@
 # ATM Web - Instrucciones de uso
 
 ## Resumen
-Proyecto demo de un cajero automático web (WAR) construido con JSF y servlets. Incluye:
+Proyecto es de un cajero automático web (WAR) construido con JSF y servlets. Incluye:
 - Login y registro de cuentas.
 - Operaciones: depósito, retiro, consulta de saldo.
 - Historial de transacciones y exportación a CSV.
@@ -43,7 +43,6 @@ B) Usando Maven y Tomcat manualmente:
 cd /d D:\ATM-WEB-FINAL-TOMCAT9
 mvn clean package -DskipTests
 ```
-
 2. Copia `target/atm-web.war` a la carpeta `TOMCAT_HOME/webapps` y arranca Tomcat.
 3. Revisa `TOMCAT_HOME/logs/catalina.*.log` si hay problemas.
 
@@ -68,16 +67,8 @@ Flujo recomendado de prueba:
 
 ## Autores / Equipo
 Por favor reemplaza estos nombres por los reales si deseas que aparezcan en la versión final:
-- Nombre 1: Tu Nombre Aquí
-- Nombre 2: Nombre del Compañero Aquí
-- Equipo técnico: (opcional) Agrega más nombres si corresponde
+- Nombre 1: Eric Eduardo Bonilla Rivera - 202110080015
+- Nombre 2: Margie Nicole Dubon Romero  - 202220070063
+- Nombre 3: Gabriela Maria Franco Peres - 201810110007
 
-Si quieres, yo puedo insertar nombres concretos si me los proporcionas.
-
-## Mejoras recomendadas (siguientes pasos)
-- Persistencia: guardar cambios de saldo y transacciones en una base de datos o actualizar `clients.csv` al modificar saldos.
-- Seguridad: hashear PINs y usar HTTPS para proteger credenciales.
-- Validación y UX: añadir validadores JSF y mensajes inline, y mejorar layout responsive (se puede integrar un framework CSS / component library).
-
----
 Fecha: 2026-03-08
