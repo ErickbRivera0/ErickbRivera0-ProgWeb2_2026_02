@@ -1,0 +1,114 @@
+/* Styles for ATM demo - refined visual design */
+:root{
+  --bg: #fbfaf7; /* warmer cream */
+  --card: #ffffff;
+  --accent: #b45309; /* warm amber */
+  --accent-600: #7c2d12;
+  --success: #16a34a; /* green */
+  --danger: #b91c1c;  /* red */
+  --muted: #6b7280;
+  --radius: 12px;
+  --max-width: 920px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, var(--bg), #fff6ed);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Page layout */
+.page{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+}
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+
+/* Card */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 12px 30px rgba(16,24,40,0.08);
+  padding:28px;
+}
+
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:18px;
+}
+.brand{
+  display:flex;align-items:center;gap:12px;
+}
+.logo{
+  width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-600));
+  color:white;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:18px
+}
+.title{font-size:20px;margin:0}
+.subtitle{color:var(--muted);font-size:13px;margin:0}
+
+/* Grid */
+.grid{ display:grid; gap:18px; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); }
+.panel{ background:#fbfdff; padding:18px; border-radius:10px; border:1px solid rgba(15,23,42,0.03) }
+
+/* Inputs */
+.input, input[type="text"], input[type="number"], input[type="password"], textarea, select{
+  width:100%; padding:12px 14px; border-radius:8px; border:1px solid #e6eef9; background:#fff; color:var(--muted);
+  font-size:14px; outline:none; transition:box-shadow .12s ease, border-color .12s ease;
+}
+.input:focus, input:focus{ box-shadow:0 4px 18px rgba(37,99,235,0.12); border-color:var(--accent-600); }
+
+/* Buttons */
+.btn{ display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border-radius:10px; border:none; cursor:pointer; font-weight:600; font-size:14px; text-decoration:none}
+.btn.primary{ background:var(--accent); color:white; box-shadow:0 6px 18px rgba(180,83,9,0.12)}
+.btn.primary:hover{ transform:translateY(-1px); }
+.btn.success{ background:var(--success); color:white }
+.btn.danger{ background:var(--danger); color:white }
+.btn.link{ background:transparent; color:var(--accent); border:1px solid rgba(37,99,235,0.08); padding:8px 12px }
+
+.actions{ display:flex; gap:12px; align-items:center; margin-top:14px }
+
+/* Alerts */
+.alert{ padding:12px 14px; border-radius:8px; margin-bottom:12px; font-weight:600 }
+.alert.error{ background:#ffeded; color:#7a1b1b }
+.alert.success{ background:#ecfdf5; color:#065f46 }
+.alert.warn{ background:#fff7ed; color:#7c2d12 }
+
+/* Table styles */
+table.table{ width:100%; border-collapse:collapse; margin-top:8px }
+table.table thead th{ text-align:left; padding:10px 12px; color:var(--muted); font-size:13px; border-bottom:1px solid #eef2ff }
+table.table tbody td{ padding:10px 12px; border-bottom:1px solid #fbfbfd }
+
+/* Responsive */
+@media (max-width:720px){
+  .page{ padding:20px }
+  .card{ padding:18px }
+}
+
+/* Minor helpers */
+.lead{ color:var(--muted); margin-bottom:10px }
+.saldo{ font-size:16px; color:var(--muted); margin:6px 0 }
+.amount{ color:var(--accent); font-weight:700 }
+.footer{ margin-top:18px; text-align:center; color:var(--muted); font-size:13px }
+
+/* Forms in panels */
+.form-row{ display:flex; gap:12px; align-items:center }
+.form-row .input{ flex:1 }
+
+/* DataTable like styling for JSF generated tables */
+table{ font-family:inherit }
+
+/* subtle transitions */
+button, .btn, input{ transition: all 120ms ease }

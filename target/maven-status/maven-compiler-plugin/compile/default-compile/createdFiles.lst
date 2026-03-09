@@ -1,0 +1,10 @@
+atm\ATMBean.class
+atm\Client.class
+atm\ClientsServlet.class
+atm\LogoutServlet.class
+atm\UserSession.class
+atm\UserStore.class
+atm\LoginServlet.class
+atm\User.class
+atm\ATMServlet.class
+atm\RegisterServlet.class

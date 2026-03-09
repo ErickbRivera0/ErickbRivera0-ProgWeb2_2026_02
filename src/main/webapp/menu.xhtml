@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<ui:composition template="layout.xhtml">
+    <ui:define name="content">
+        <h1>Menú</h1>
+        <h:panelGroup>
+            <h:outputText value="#{userSession.message}" style="color:#065f46;font-weight:bold" rendered="#{not empty userSession.message}" />
+            <h:outputText value="#{userSession.error}" style="color:#b91c1c;font-weight:bold" rendered="#{not empty userSession.error}" />
+        </h:panelGroup>
+
+        <h:panelGrid columns="2">
+            <h:button value="Depositar" outcome="deposit.xhtml" styleClass="btn" />
+            <h:button value="Retirar" outcome="withdraw.xhtml" styleClass="btn" />
+            <h:button value="Consultar Saldo" outcome="balance.xhtml" styleClass="btn" />
+            <h:button value="Clientes" outcome="clients.xhtml" styleClass="btn" />
+            <h:button value="Historial" outcome="history.xhtml" styleClass="btn" />
+        </h:panelGrid>
+        <h:form>
+            <h:commandButton value="Cerrar sesión" action="#{userSession.logoutAction}" styleClass="btn link" />
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>

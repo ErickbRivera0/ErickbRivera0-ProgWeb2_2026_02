@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:composition template="layout.xhtml">
+    <ui:define name="content">
+        <h1>Clientes</h1>
+        <h:panelGroup>
+            <h:outputText value="Lista de clientes cargada" style="color:var(--muted)" />
+        </h:panelGroup>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Cuenta</th>
+                    <th>Saldo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <ui:repeat value="#{atmBean.clients}" var="c">
+                    <tr>
+                        <td>#{c.accountNumber}</td>
+                        <td>$#{c.balance}</td>
+                    </tr>
+                </ui:repeat>
+            </tbody>
+        </table>
+        <div class="actions">
+            <h:button value="Volver" outcome="menu.xhtml" />
+        </div>
+    </ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<ui:composition template="layout.xhtml">
+    <ui:define name="content">
+        <h1>Registro de Cuenta</h1>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel for="acc" value="Cuenta:" />
+                <h:inputText id="acc" value="#{userSession.regAccount}" />
+                <h:outputLabel for="pin" value="PIN:" />
+                <h:inputSecret id="pin" value="#{userSession.regPin}" />
+            </h:panelGrid>
+            <h:commandButton value="Crear cuenta" action="#{userSession.registerAction}" />
+            <h:commandButton value="Volver" action="index.xhtml" immediate="true" />
+        </h:form>
+        <h:panelGroup>
+            <h:outputText value="#{userSession.error}" style="color:#b91c1c;font-weight:bold" rendered="#{not empty userSession.error}" />
+            <h:outputText value="#{userSession.message}" style="color:#065f46;font-weight:bold" rendered="#{not empty userSession.message}" />
+        </h:panelGroup>
+    </ui:define>
+</ui:composition>
+</html>
