@@ -66,7 +66,6 @@ Flujo recomendado de prueba:
 - `src/main/resources/clients.csv` contiene las 3 columnas: `accountNumber,balance,pin`. Puedes editarlo y reiniciar la aplicación para recargar los clientes (se cargan en `@PostConstruct` al arrancar el contexto).
 
 ## Autores / Equipo
-Por favor reemplaza estos nombres por los reales si deseas que aparezcan en la versión final:
 - Nombre 1: Eric Eduardo Bonilla Rivera - 202110080015
 - Nombre 2: Margie Nicole Dubon Romero  - 202220070063
 - Nombre 3: Gabriela Maria Franco Peres - 201810110007
